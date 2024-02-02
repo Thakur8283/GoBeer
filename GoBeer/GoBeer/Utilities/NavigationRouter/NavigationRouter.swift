@@ -20,7 +20,9 @@ struct NavigationRouter {
     
     static func provideBeerListViewController() -> BeerListViewController {
         let storyBoard = UIStoryboard(name: AppStoryboardsName.main.rawValue, bundle: nil)
-        let beerListViewController = storyBoard.instantiateViewController(withIdentifier: BeerListViewController.className) as! BeerListViewController
+        guard let beerListViewController = storyBoard.instantiateViewController(withIdentifier: BeerListViewController.className) as? BeerListViewController else {
+            return BeerListViewController()
+        }
         beerListViewController.viewModel = BeersViewModel(service: BeerAPIService())
         return beerListViewController
     }
