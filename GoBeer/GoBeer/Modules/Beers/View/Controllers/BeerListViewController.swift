@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class BeerListViewController: UIViewController {
+final class BeerListViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
@@ -26,14 +26,13 @@ class BeerListViewController: UIViewController {
         bindData()
         loadAllBeers()
     }
-    
     // MARK: - Setup methods
     func registerCustomCell() {
         beerCollectionView.register(UINib(nibName: BeerCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BeerCollectionViewCell.identifier)
     }
     
     // MARK: - Helper methods
-    func bindData() {
+    private func bindData() {
         viewModel?.$beers
             .receive(on: DispatchQueue.main)
             .sink { beers in
@@ -60,7 +59,7 @@ class BeerListViewController: UIViewController {
     }
     
     // MARK: - Data Source methods
-    func loadAllBeers() {
+    private func loadAllBeers() {
         Task {
             try await viewModel?.loadAllBeers()
         }

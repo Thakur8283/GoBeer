@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BeerCollectionViewCell: UICollectionViewCell {
+final class BeerCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var cellBgView: UIView!

@@ -15,7 +15,7 @@ public enum AppStoryboardsName: String {
 // MARK:  UI Elements Dimensions Enums
 public enum CollectionViewDimensions: Int {
     case noOfColumnsRequired = 2
-    case cellheight = 250
+    case cellheight = 275
 }
 
 

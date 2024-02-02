@@ -10,7 +10,7 @@ import Foundation
 
 @testable import GoBeer
 
-class ImageCacheManagerTests: XCTestCase {
+final class ImageCacheManagerTests: XCTestCase {
 
     var sut: ImageCacheManager?
     

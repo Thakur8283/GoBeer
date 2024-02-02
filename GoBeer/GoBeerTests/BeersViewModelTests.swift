@@ -8,7 +8,7 @@
 import XCTest
 @testable import GoBeer
 
-class BeersViewModelTests: XCTestCase {
+final class BeersViewModelTests: XCTestCase {
     var sut: BeersViewModel?
     
     override func setUpWithError() throws {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BeerDetailsViewController: UIViewController {
+final class BeerDetailsViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var beerDescriptionLabel: UILabel!
@@ -26,7 +26,7 @@ class BeerDetailsViewController: UIViewController {
     }
     
     // MARK: - Setup methods
-    func setUpUI() {
+    private func setUpUI() {
         guard let beerDetails = beer else {return}
         beerDescriptionLabel.text = beerDetails.description
         if let beerVolume = beerDetails.volume,let beerVolumeValue = beerVolume.value,let beerVolumeUnit = beerVolume.unit, let abv = beerDetails.abv {

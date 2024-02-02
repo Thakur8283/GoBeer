@@ -7,7 +7,7 @@
 
 import XCTest
 
-class GoBeerUITestsLaunchTests: XCTestCase {
+final class GoBeerUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

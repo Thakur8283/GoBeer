@@ -8,7 +8,7 @@
 import XCTest
 @testable import GoBeer
 
-class BeerListViewControllerTests: XCTestCase {
+final class BeerListViewControllerTests: XCTestCase {
     
     var sut: BeerListViewController!
     
